@@ -1,0 +1,5 @@
+manager&hr&team leader see employee
+admins see team leader ,employee ,hr,manager
+
+add now function in employee
+
