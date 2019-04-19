@@ -49,6 +49,7 @@ class EmployeeController extends Controller
             'email' => 'required|string|email|max:255|unique:users',
             'job_title' =>'required|string|max:255',
             'from' => 'required|date_format:H:i',
+            'password' => 'required|string|min:6',
             'to' => 'required|date_format:H:i|after:from',
             'salary'=> 'required|integer',
             );
@@ -62,6 +63,7 @@ class EmployeeController extends Controller
             'name' => $request->input('name'),
             'email' => $request->input('email'),
             'job_title'=>$request->input('job_title'),
+            'password'=>Hash::make($request->input('password')),
             'from' => $request->input('from'),
             'to' => $request->input('to'),
             'salary' => $request->input('salary'),
@@ -104,9 +106,8 @@ class EmployeeController extends Controller
                 $holiday = $request->input('friday');
                 $friday = DB::insert('insert into holidays (employee_id,holiday) values (?, ?)', [$Employee->id, $holiday]);
             }
-        
-           $Employee->off_days = count($Employee->holidays);
-           $Employee->save();
+        /*  $Employee->off_days = count($Employee->holidays);
+           $Employee->save();*/
 
            return redirect('All-employees')->with('status','A new member has been added');
       }

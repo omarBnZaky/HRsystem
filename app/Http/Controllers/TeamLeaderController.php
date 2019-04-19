@@ -53,7 +53,7 @@ class TeamLeaderController extends Controller
             'password' => Hash::make($request->input('password')),
             ]);
             $User->save();
-            $role_user = DB::insert('insert into role_user (user_id, role_id) values (?, ?)', [$User->id, 3]);
+            $role_user = DB::insert('insert into role_user (user_id, role_id) values (?, ?)', [$User->id, 4]);
     
            return redirect('All-members')->with('status','A new member has been added');
       }

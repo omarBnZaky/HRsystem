@@ -67,3 +67,12 @@ Route::get('/category/edit{id}','EmployeeController@edit_employee_page')->name('
 Route::post('/category/edit{id}','EmployeeController@search_attendence')->name('searchAttendence');
 
 */
+
+
+
+Route::get('/create_role','HomeController@create_role')->name('createrole');
+Route::post('/create_role','HomeController@store_role')->name('storerole');
+
+Route::get('/edit_role/{id}','HomeController@edit_role')->name('editerole');
+Route::post('/edit_role/{id}','HomeController@edit_role')->name('updaterole');
+Route::get('/allRoles','HomeController@roles')->name('allroles');

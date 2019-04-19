@@ -3,7 +3,7 @@
 @section('content')
 <div class="content-wrapper">
 <section class="content container-fluid">
-<h2>give member permision</h2>
+<h2>give {{$user->name}} permision</h2>
 <form method="POST" action="/Add-role/{{$user->id}}/{role_id}"> 
 @csrf
 <div class="form-group">

@@ -163,4 +163,48 @@ class HomeController extends Controller
 
     }
 
+
+
+    /*
+
+    public function roles(){
+        $Roles = Role::all();
+        return view('admin.all-roles',compact('Roles'));
+    }
+
+
+
+    public function create_role(){
+      
+        return view('admin.create-role',compact('user','Roles'));
+    }
+
+    
+
+
+    public function store_role(){
+        $role = new Role;
+        $role->name = $request->input('name');
+        $role->save();
+        return redirect()->route('allroles')->with('msg','new role added succesfully');
+    }
+
+
+
+    public function edit_role(){
+      
+        return view('admin.edit-role',compact('user','Roles'));
+    }
+
+
+
+    public function update_role(){
+        $role = Role::find($id);
+        $role->name = $request->input('name');
+        $role->save();
+        return redirect()->route('allroles')->with('msg',' role updated succesfully');
+    }*/
+
+
+
 }

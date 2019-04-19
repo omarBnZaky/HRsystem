@@ -19,6 +19,13 @@
       <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" value="{{ old('email') }}">
     </div>
     
+    
+<div class="form-group">
+      <label for="password">password:</label>
+      <input type="password" class="form-control" id="password" placeholder="password" name="password">
+    </div>
+    
+    
 <div class="form-group">
       <label for="job_title">job:</label>
       <input type="text" class="form-control" id="job_title" placeholder="Enter job title" name="job_title" value="{{ old('job_title') }}">

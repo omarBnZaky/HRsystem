@@ -29,6 +29,7 @@
             <td>{{ $user->name }}</td>
             <td>{{ $user->email }}</td>
             <td>
+                
                 @foreach( $user->roles as $role)
                 <div class="text-info">{{ $role->name }}  </div>
                 @endforeach

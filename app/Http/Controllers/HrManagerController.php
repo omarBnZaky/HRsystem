@@ -52,7 +52,7 @@ class HrManagerController extends Controller
             'password' => Hash::make($request->input('password')),
             ]);
             $User->save();
-            $role_user = DB::insert('insert into role_user (user_id, role_id) values (?, ?)', [$User->id, 1]);
+            $role_user = DB::insert('insert into role_user (user_id, role_id) values (?, ?)', [$User->id, 2]);
     
            return redirect('All-members')->with('status','A new hr has been added');
       }
